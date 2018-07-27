@@ -1,3 +1,24 @@
-<h1>
+<h2>
   {{title}}
-</h1>
+  <br>
+  {{ServerObj.connectionStaus}}
+</h2>
+<button (click)="ServerObj.connect()">Connect</button>
+<br>
+<br>
+<p *ngIf="servercreated; else noServer">server is created and the servername is {{servername}}</p>
+<ng-template #noServer>
+    <p>No server was created!!! else block</p>
+ </ng-template>
+<button (click)="oncreateserver()"> server </button>>
+{{servercreationstatus}}
+<br>
+<br>
+<ul>
+  <li *ngFor='let a of userlist'>
+    {{a}}
+  </li>
+</ul>
+<br>
+<br>
+<p [ngStyle]="{backgroundColor: getcolor()}">{{'server'}} with id {{id}} is {{getserverstatus()}}</p>
