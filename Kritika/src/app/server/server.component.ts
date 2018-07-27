@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { server } from './server';
 
 @Component({
   selector: 'app-server',
